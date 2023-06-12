@@ -11,7 +11,7 @@
 #*******************************************************************************
 export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m"
 
-OPTIONS="-Dtycho.localArtifacts=ignore $@"
+OPTIONS="-Dtycho.localArtifacts=ignore -DskipTests=true $@"
 
 mvn clean verify -f releng/mirroring/pom.xml $OPTIONS || exit 100 
 
